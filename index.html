@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
   <script>new WOW().init();</script>
@@ -16,39 +16,38 @@
 </head>
 
 <body id="body" class="noOverflow">
-<div id="mainDiv" class="main">
-  <div class="mainContent">
-    <img class="animated fadeIn logo" alt="Prep Logo" id="logo" title="Prep Logo" src="images/prepLogo.png">
+  <div id="mainDiv" class="main">
+    <div class="mainContent">
+      <img class="animated fadeIn logo" alt="Prep Logo" id="logo" title="Prep Logo" src="images/prepLogo.png">
       <div id="zipCodeInfo">
-        <h2 data-wow-delay=".2s" id="description" class="animated wow fadeIn description">Enter Your ZIP Code to begin prepping your meals for the week:</h2>
-        <div data-wow-delay=".5s" class="fadeIn animated wow"><input type="text" name="zipCode" id="zipCode" placeholder="Enter ZIP Code" autocomplete="off"><br><button id="submitZipCode">Get Cookin'</button></div>
-     </div>
+        <h2 data-wow-delay=".2s" id="description" class="animated wow fadeIn description">Enter Your ZIP Code to begin
+          prepping your meals for the week:</h2>
+        <div data-wow-delay=".5s" class="fadeIn animated wow"><input type="text" name="zipCode" id="zipCode"
+            placeholder="Enter ZIP Code" autocomplete="off"><br><button id="submitZipCode">Get Cookin'</button></div>
+      </div>
+    </div>
   </div>
-</div>
-<span id="error"></span>
-<div id="show"></div>
+  <span id="error"></span>
+  <div id="show"></div>
 
-<div data-wow-delay="1s" id="hotFoods" class="hidden animated fadeIn wow">
-  <h3>It's gonna be a hot week. You know what sounds good?</h3>
-  <button class="animated fadeIn recipeButton" onclick="getRecipeBurger()">BURGERS</button>
-  <button class="animated fadeIn recipeButton" onclick="getRecipeWraps()">WRAPS</button>
-  <button class="animated fadeIn recipeButton" onclick="getRecipeSalad()">SALADS</button>
-  <button class="animated fadeIn recipeButton" onclick="getRecipeSandwich()">SANDWICHES</button>
-</div>
+  <div data-wow-delay="1s" id="hotFoods" class="hidden animated fadeIn wow">
+    <h3>It's gonna be a hot week. You know what sounds good?</h3>
+    <button class="animated fadeIn recipeButton" onclick="getRecipeBurger()">BURGERS</button>
+    <button class="animated fadeIn recipeButton" onclick="getRecipeWraps()">WRAPS</button>
+    <button class="animated fadeIn recipeButton" onclick="getRecipeSalad()">SALADS</button>
+    <button class="animated fadeIn recipeButton" onclick="getRecipeSandwich()">SANDWICHES</button>
+  </div>
 
-<div data-wow-delay="1s" id="coldFoods" class="hidden animated fadeIn wow">
-  <h3>It's lookin' chilly this week. Try warming up with some of these!</h3>
-  <button class="animated fadeIn recipeButton" onclick="getRecipeSoup()">SOUP</button>
-  <button class="animated fadeIn recipeButton" onclick="getRecipeRamen()">RAMEN</button>
-  <button class="animated fadeIn recipeButton" onclick="getRecipePasta()">PASTA</button>
-  <button class="animated fadeIn recipeButton" onclick="getRecipeChilli()">CHILLI</button>
-</div>
-<div id="output" class="hidden animated wow fadeInUp">
-</div>
-<div id="findTheLinkDiv" class="hidden">
-  <h3 class="findTheLink">Find the link to the recipe Here:</h3>
-</div>
-<a href="" class="hidden" id="sourceLink"></a>
+  <div data-wow-delay="1s" id="coldFoods" class="hidden animated fadeIn wow">
+    <h3>It's lookin' chilly this week. Try warming up with some of these!</h3>
+    <button class="animated fadeIn recipeButton" onclick="getRecipeSoup()">SOUP</button>
+    <button class="animated fadeIn recipeButton" onclick="getRecipeRamen()">RAMEN</button>
+    <button class="animated fadeIn recipeButton" onclick="getRecipePasta()">PASTA</button>
+    <button class="animated fadeIn recipeButton" onclick="getRecipeChilli()">CHILI</button>
+  </div>
+  <div id="output" class="recipeDiv hidden animated wow fadeInUp">
+  </div>
   <script src="main.js"></script>
 </body>
+
 </html>
