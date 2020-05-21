@@ -1,14 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Barlow+Semi+Condensed|Mr+Dafoe|Pacifico|Playfair+Display&display=swap');
 
-.noOverflow{
-  overflow:hidden;
-}
 #output{
   text-align:center;
   background-color:#b74848;
-  padding:2.5% 0px 20px 0px;
+  padding:10% 5%;
   margin-top:25px;
-
 }
 .main{
   display:flex;
@@ -43,8 +39,9 @@
   margin-top:20px;
 }
 .logo{
-  width:23%;
+  width:25%;
   margin-top:25px;
+  margin-bottom:25px;
   transition: all .5s ease-in;
 }
 .logo2{
@@ -53,7 +50,7 @@
   transition: all .5s ease-in;
 }
 #zipCode{
- width:15%;
+ width:25%;
  height:50px;
  margin-top:15px;
  background-color:transparent;
@@ -78,11 +75,10 @@
   font-size:1.25rem;
   color:#2c2c2c;
   transition:all .25s ease-in;
-
 }
-h1{
+h2{
   font-family: "Playfair Display";
-  font-size:8rem;
+  font-size:4rem;
   color:white;
   margin-bottom:10px;
 }
@@ -99,11 +95,8 @@ h3{
   margin:0px 5px;
   flex: 0 0 14.66667% !important;
 }
-
-
 .weatherDiv{
   background-color:#ffffff;
-  margin:10px 0px 0px 0px;
   text-align:center;
   padding:50px 0px;
   border-radius:20px;
@@ -111,19 +104,24 @@ h3{
   box-shadow:0px 5px 5px #999999;
 }
 .weatherDiv:hover{
-  margin:0px 0px 10px 0px;
   opacity:1;
   padding:55px 0px;
-  box-shadow:0px 10px 10px #7c7c7c;
+  box-shadow:0px 10px 10px #9c9c9c;
+}
+.weatherDivContainer{
+  margin:10px 0px 0px 0px;
+  transition:ease all .2s;
+}
+.weatherDivContainer:hover{
+  margin:0px 0px 0px 0px;
 }
 .weatherDiv > h3{
   color:#b74848;
   font-size:1.25rem;
 }
 .temperature{
-    color:#000000;
-    margin-top:15px;
-   font-size:2.25rem;
+  color:#1c1c1c;
+  font-size:2.25rem;
 }
 .degrees{
   font-size:18px;
@@ -136,8 +134,8 @@ h3{
 }
 body{
   background:url("../images/prepBackground.png");
-  background-size:cover;
-  height:900px
+  background-size: cover;
+  height:1134px;
 }
 #submitZipCode{
   margin:25px;
@@ -172,7 +170,7 @@ body{
   margin-bottom: 25px;
   text-align:center;
   font-family:"Playfair Display";
-  font-size:2.5rem;
+  font-size:2.0rem;
 }
 .recipeButton{
   margin:25px 0px;
@@ -189,7 +187,8 @@ body{
   background-color:#b74848;
   color:white;
   padding:5px 75px;
-  font-family:"Barlow Semi Condensed"
+  font-family:"Barlow Semi Condensed";
+  outline:none;
 }
 .recipeButton:hover{
   margin:25px 0px;
@@ -198,7 +197,6 @@ body{
   padding:5px 75px;
   font-family:"Barlow Semi Condensed"
 }
-
 #findTheLinkDiv{
   text-align:center;
 }
@@ -214,18 +212,15 @@ body{
   padding:15px 35px 35px 35px;
   color:white;
 }
-
 .readyIn{
   padding-top:0px;
   padding-bottom:10px;
   font-size:1.5rem;
-
 }
 .minutes{
   font-size:2.75rem;
   color:white;
 }
-
 .divider{
   border-bottom:5px solid #b74848;
   margin:20px 0px;
@@ -236,22 +231,120 @@ body{
   border-style: 10px solid white !important;
 }
 
+.recipeDiv{
+  padding:25px 0px;
+}
+
+.findRecipeButton{
+  border:2px solid #ffffff;
+  color:white;
+  background-color:#b74848;
+  font-family:"Barlow Semi Condensed";
+  padding:5px 15px;
+  margin-top:25px;
+  font-size:1.25rem;
+  transition:ease all .2s;
+}
+.findRecipeButton:hover{
+  border:2px solid #ffffff;
+  color:#b74848;
+  background-color:white;
+  font-family:"Barlow Semi Condensed";
+  padding:5px 15px;
+  margin-top:25px;
+  font-size:1.25rem;
+}
+
+.weatherStatus{
+  color: #6c6c6c;
+  font-family:"Barlow Semi Condensed";
+}
+
 @media screen and (min-width: 1600px) {
   .main{
     height:850px;
     transition: all .5s ease-in;
   }
   .main2{
-  height:400px;
+    height:400px;
+    transition: all .5s ease-in;
+  }
+  .main3{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    width:100%;
+    height:400px;
+    transition: all .5s ease-in;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .main{
+    height:850px;
+    transition: all .5s ease-in;
+  }
+  .main2{
+    height:400px;
+    transition: all .5s ease-in;
+  }
+  .main3{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    width:100%;
+    height:400px;
+    transition: all .5s ease-in;
+  }
+}
+
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+
+.logo{
+ width:50%;
+  margin-top:30px;
+  padding-top:30px;
+  margin-bottom:25px;
   transition: all .5s ease-in;
 }
-.main3{
+
+.logo2{
+  width:25%;
+  margin-top:10px;
+  padding-top:10px;
+  margin-bottom:25px;
+  transition: all .5s ease-in;
+}
+.weatherColumn{
   display:flex;
   justify-content:center;
-  align-items:center;
-  text-align:center;
-  width:100%;
-  height:400px;
-  transition: all .5s ease-in;
 }
+.weatherDiv{
+  width:90%;
+}
+#zipCode{
+  width:60%;
+}
+#zipCode:focus{
+  width:80%;
+}
+.recipeButton{
+  width:80%;
+  background-color: #b74848;
+  color:white;
+  margin:10px 0px;
+}
+.recipeButton:focus{
+  width:90%;
+}
+
+#recipeImage{
+  width:100%;
+  height:auto;
+ }
 }
