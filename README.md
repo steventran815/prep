@@ -1,19 +1,30 @@
-# C220-Hackathon-2
+# Prep
+A dynamic web application that helps meal-preppers prepare meals based on the week's upcoming weather.
 
-For this Hackathon, you will be combining multiple public APIs of your choosing in order to create a web application that uses their combined data to create something new. The application is yours to design, but your idea must be approved by an instructor before you can move forward with building the application.
+#### Live Site
+Check out the live site here - [Prep](https://prep.steventrancodes.com)
 
-### Requirements
-- Combine **at least** 2 public APIs via AJAX requests and present their combined information in a web application of your design.
-- Must be issue-managed via [Meistertask](https://www.meistertask.com/) or an equivalent Kanban board.
-- Application idea **MUST** be approved by an instructor before you begin coding your project.
+#### Technologies
+* HTML5
+* CSS3
+* Bootstrap 4
+* JavaScript
+* jQuery
+* AJAX
+
+#### Features
+* User can view upcoming 5 day forecast
+* User can view appropriate recipes for hot days
+* User can view appropriate recipes for cold days
+* User can view recipe details on an external recipe site
+
+#### Preview
 
 
-### Approved API List
-
-Found [**here**](https://docs.google.com/document/d/10CMIYVWv36gophaq_3DldBoAT4w6g4xL9xEMnEu-z5o/edit?usp=sharing)
-
-### ProgrammableWeb API Directory
-
-Found [**here**](https://www.programmableweb.com/apis/directory)
-
-**NOTE:** Any APIs found through this link not on the approved API list above must be approved by an instructor to be used. In order to be approved, you must be able to provide proof of a successful AJAX call in the browser **WITHOUT** using VSCode's Live Server.
+#### Getting Started
+1. Clone the repository and navigate to the directory.
+```shell
+git clone https://github.com/steventran815/prep.git
+cd prep
+```
+Open the file through a code editor and open default browser from index.html file.
