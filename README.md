@@ -19,7 +19,7 @@ Check out the live site here - [Prep](https://prep.steventrancodes.com)
 * User can view recipe details on an external recipe site
 
 #### Preview
-
+![Prep-Demo-preview](./server/public/images/prepDemo.gif)
 
 #### Getting Started
 1. Clone the repository and navigate to the directory.
