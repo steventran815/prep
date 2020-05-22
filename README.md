@@ -27,4 +27,4 @@ Check out the live site here - [Prep](https://prep.steventrancodes.com)
 git clone https://github.com/steventran815/prep.git
 cd prep
 ```
-Open the file through a code editor and open default browser from index.html file.
+2. Open the file through a code editor and open default browser from index.html file.
