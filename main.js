@@ -3,6 +3,7 @@ var hiddenColdFood = document.getElementById("coldFoods")
 var output = document.getElementById("output")
 var mainDiv = document.getElementById("mainDiv")
 var logo = document.getElementById("logo")
+var recipeNumber = (Math.floor(Math.random() * (10 - 1) + 1));
 
 function getSource(id) {
   $.ajax({
@@ -11,26 +12,26 @@ function getSource(id) {
 }
 
 function getRecipeBurger() {
-  $.ajax({
-    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=1&query=burger",
-    success: function (res) {
 
+  $.ajax({
+    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=burger",
+    success: function (res) {
       output.classList.remove("hidden");
       output.classList.add("reveal")
       mainDiv.classList.remove("main2")
       mainDiv.classList.add("main3")
 
       document.getElementById("output").innerHTML =
-        "<h2>" + res.results[0].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
-        + res.results[0].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
-        + res.baseUri + res.results[0].image + "'height='400'/><br>"
-        + "<a href='" + res.results[0].sourceUrl + "' target='_blank'> <button class='findRecipeButton'>FIND THE RECIPE HERE</button></a>"
+        "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
+        + res.results[recipeNumber].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
+        + res.baseUri + res.results[recipeNumber].image + "'height='400'/><br>"
+        + "<a href='" + res.results[recipeNumber].sourceUrl + "' target='_blank'> <button class='findRecipeButton'>FIND THE RECIPE HERE</button></a>"
     }
   })
 }
 function getRecipeWraps() {
   $.ajax({
-    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=1&query=wrap",
+    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=wrap",
     success: function (res) {
 
       output.classList.remove("hidden");
@@ -39,16 +40,16 @@ function getRecipeWraps() {
       mainDiv.classList.add("main3")
 
       document.getElementById("output").innerHTML =
-        "<h2>" + res.results[0].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
-        + res.results[0].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
-        + res.baseUri + res.results[0].image + "'height='400'/><br>"
-        + "<a href='" + res.results[0].sourceUrl + "' target='_blank'> <button class='findRecipeButton'>FIND THE RECIPE HERE</button></a>"
+        "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
+        + res.results[recipeNumber].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
+        + res.baseUri + res.results[recipeNumber].image + "'height='400'/><br>"
+        + "<a href='" + res.results[recipeNumber].sourceUrl + "' target='_blank'> <button class='findRecipeButton'>FIND THE RECIPE HERE</button></a>"
     }
   })
 }
 function getRecipeSalad() {
   $.ajax({
-    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=1&query=salad",
+    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=salad",
     success: function (res) {
 
       output.classList.remove("hidden");
@@ -57,16 +58,16 @@ function getRecipeSalad() {
       mainDiv.classList.add("main3")
 
       document.getElementById("output").innerHTML =
-        "<h2>" + res.results[0].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
-        + res.results[0].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
-        + res.baseUri + res.results[0].image + "'height='400'/><br>"
-        + "<a href='" + res.results[0].sourceUrl + "' target='_blank'> <button class='findRecipeButton'>FIND THE RECIPE HERE</button></a>"
+        "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
+        + res.results[recipeNumber].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
+        + res.baseUri + res.results[recipeNumber].image + "'height='400'/><br>"
+        + "<a href='" + res.results[recipeNumber].sourceUrl + "' target='_blank'> <button class='findRecipeButton'>FIND THE RECIPE HERE</button></a>"
     }
   })
 }
 function getRecipeSandwich() {
   $.ajax({
-    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=1&query=cold+sandwiches",
+    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=cold+sandwiches",
     success: function (res) {
 
       output.classList.remove("hidden");
@@ -75,16 +76,16 @@ function getRecipeSandwich() {
       mainDiv.classList.add("main3")
 
       document.getElementById("output").innerHTML =
-        "<h2>" + res.results[0].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
-        + res.results[0].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
-        + res.baseUri + res.results[0].image + "'height='400'/><br>"
-        + "<a href='" + res.results[0].sourceUrl + "' target='_blank'> <button class='findRecipeButton'>FIND THE RECIPE HERE</button></a>"
+        "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
+        + res.results[recipeNumber].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
+        + res.baseUri + res.results[recipeNumber].image + "'height='400'/><br>"
+        + "<a href='" + res.results[recipeNumber].sourceUrl + "' target='_blank'> <button class='findRecipeButton'>FIND THE RECIPE HERE</button></a>"
     }
   })
 }
 function getRecipeSoup() {
   $.ajax({
-    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=1&query=soup",
+    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=soup",
     success: function (res) {
 
       output.classList.remove("hidden");
@@ -93,16 +94,16 @@ function getRecipeSoup() {
       mainDiv.classList.add("main3")
 
       document.getElementById("output").innerHTML =
-        "<h2>" + res.results[0].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
-        + res.results[0].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
-        + res.baseUri + res.results[0].image + "'height='400'/><br>"
-        + "<a href='" + res.results[0].sourceUrl + "' target='_blank'> <button class='findRecipeButton'>FIND THE RECIPE HERE</button></a>"
+        "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
+        + res.results[recipeNumber].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
+        + res.baseUri + res.results[recipeNumber].image + "'height='400'/><br>"
+        + "<a href='" + res.results[recipeNumber].sourceUrl + "' target='_blank'> <button class='findRecipeButton'>FIND THE RECIPE HERE</button></a>"
     }
   })
 }
 function getRecipeRamen() {
   $.ajax({
-    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=1&query=ramen",
+    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=ramen",
     success: function (res) {
 
       output.classList.remove("hidden");
@@ -111,16 +112,16 @@ function getRecipeRamen() {
       mainDiv.classList.add("main2")
 
       document.getElementById("output").innerHTML =
-        "<h2>" + res.results[0].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
-        + res.results[0].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
-        + res.baseUri + res.results[0].image + "'height='400'/><br>"
-        + "<a href='" + res.results[0].sourceUrl + "' target='_blank'> <button class='findRecipeButton'>FIND THE RECIPE HERE</button></a>"
+        "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
+        + res.results[recipeNumber].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
+        + res.baseUri + res.results[recipeNumber].image + "'height='400'/><br>"
+        + "<a href='" + res.results[recipeNumber].sourceUrl + "' target='_blank'> <button class='findRecipeButton'>FIND THE RECIPE HERE</button></a>"
     }
   })
 }
 function getRecipePasta() {
   $.ajax({
-    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=1&query=pasta",
+    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=pasta",
     success: function (res) {
 
       output.classList.remove("hidden");
@@ -128,16 +129,16 @@ function getRecipePasta() {
       mainDiv.classList.remove("main2")
       mainDiv.classList.add("main3")
 
-      "<h2>" + res.results[0].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
-        + res.results[0].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
-        + res.baseUri + res.results[0].image + "'height='400'/><br>"
-        + "<a href='" + res.results[0].sourceUrl + "' target='_blank'> <button class='findRecipeButton'>FIND THE RECIPE HERE</button></a>"
+      "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
+        + res.results[recipeNumber].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
+        + res.baseUri + res.results[recipeNumber].image + "'height='400'/><br>"
+        + "<a href='" + res.results[recipeNumber].sourceUrl + "' target='_blank'> <button class='findRecipeButton'>FIND THE RECIPE HERE</button></a>"
     }
   })
 }
 function getRecipeChilli() {
   $.ajax({
-    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=1&query=chilli",
+    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=chilli",
     success: function (res) {
 
       output.classList.remove("hidden");
@@ -145,10 +146,10 @@ function getRecipeChilli() {
       mainDiv.classList.remove("main2")
       mainDiv.classList.add("main3")
 
-      "<h2>" + res.results[0].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
-        + res.results[0].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
-        + res.baseUri + res.results[0].image + "'height='400'/><br>"
-        + "<a href='" + res.results[0].sourceUrl + "' target='_blank'> <button class='findRecipeButton'>FIND THE RECIPE HERE</button></a>"
+      "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
+        + res.results[recipeNumber].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
+        + res.baseUri + res.results[recipeNumber].image + "'height='400'/><br>"
+        + "<a href='" + res.results[recipeNumber].sourceUrl + "' target='_blank'> <button class='findRecipeButton'>FIND THE RECIPE HERE</button></a>"
     }
   })
 }
@@ -173,8 +174,6 @@ $(document).ready(function () {
           mainDiv.classList.add("main2")
           logo.classList.remove("logo")
           logo.classList.add("logo2")
-          var averageWeather = (((data.list[0].main.temp) + (data.list[1].main.temp) + (data.list[2].main.temp) + (data.list[3].main.temp) + (data.list[4].main.temp)) / 5);
-          console.log(averageWeather);
         }
       });
     } else {
