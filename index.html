@@ -1,350 +1,53 @@
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Barlow+Semi+Condensed|Mr+Dafoe|Pacifico|Playfair+Display&display=swap');
+<!DOCTYPE html>
+<html lang="en">
 
-#output{
-  text-align:center;
-  background-color:#b74848;
-  padding:5% 5%;
-  margin-top:25px;
-}
-.main{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  width:100%;
-  height:600px;
-  transition: all .5s ease-in;
-}
-.main2{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  width:100%;
-  height:400px;
-  transition: all .5s ease-in;
-}
-.main3{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  width:100%;
-  height:400px;
-  transition: all .5s ease-in;
-}
-.mainContent{
-  width:80%;
-  padding-top:20px;
-  margin-top:20px;
-}
-.logo{
-  width:25%;
-  margin-top:25px;
-  margin-bottom:25px;
-  transition: all .5s ease-in;
-}
-.logo2{
-  width:15%;
-  margin-top:0px;
-  transition: all .5s ease-in;
-}
-#zipCode{
- width:25%;
- height:50px;
- margin-top:15px;
- background-color:transparent;
- border-style:none;
- border-bottom:1px solid #6c6c6c;
- text-align:center;
- font-size:1.25rem;
- transition:all .25s ease-out;
- font-family:"Playfair Display";
- outline:none;
-}
-#zipCode:focus{
- outline:none;
-}
-#zipCode:hover{
- width:40%;
- background-color:white;
- border:1px solid #9c9c9c;
-}
-.description{
-  font-family:"Playfair Display";
-  font-size:1.25rem;
-  color:#2c2c2c;
-  transition:all .25s ease-in;
-}
-h2{
-  font-family: "Playfair Display";
-  font-size:4rem;
-  color:white;
-  margin-bottom:10px;
-}
-h3{
-  color:#2c2c2c;
-  font-family:"Playfair Display";
-  font-size:1.5rem;
-}
-.row{
-  justify-content:space-around;
-}
-.col-md-2{
-  padding:50px 0px !important;
-  margin:0px 5px;
-  flex: 0 0 14.66667% !important;
-}
-.weatherDiv{
-  background-color:#ffffff;
-  text-align:center;
-  padding:50px 0px;
-  border-radius:20px;
-  transition:all .1s ease-in;
-  box-shadow:0px 5px 5px #999999;
-}
-.weatherDiv:hover{
-  opacity:1;
-  padding:55px 0px;
-  box-shadow:0px 10px 10px #9c9c9c;
-}
-.weatherDivContainer{
-  margin:10px 0px 0px 0px;
-  transition:ease all .2s;
-}
-.weatherDivContainer:hover{
-  margin:0px 0px 0px 0px;
-}
-.weatherDiv > h3{
-  color:#b74848;
-  font-size:1.25rem;
-}
-.temperature{
-  color:#1c1c1c;
-  font-size:2.25rem;
-}
-.degrees{
-  font-size:18px;
-}
-.hidden{
-  display:none;
-}
-.reveal{
-  display:block;
-}
-body{
-  background:url("../images/prepBackground.png");
-  background-size: cover;
-  height:1134px;
-}
-#submitZipCode{
-  margin:25px;
-  padding:5px 40px;
-  background-color:transparent;
-  border:2px solid #b74848;
-  color:#b74848;
-  font-family:"Barlow Semi Condensed";
-  font-size:1.25rem;
-  transition:all .25s ease-out;
-  outline:none;
-}
-#submitZipCode:hover{
-  background-color:#b74848;
-  border:2px solid #b74848;
-  color:#FFFFFF;
-  outline:none;
-}
-#coldFoods{
-  padding-top:25px;
-  margin-top:25px;
-  text-align:center;
-  justify-content:center;
-}
-#hotFoods{
-  padding-top:25px;
-  margin-top:25px;
-  text-align:center;
-  justify-content:center;
-}
-.forecast{
-  margin-bottom: 25px;
-  text-align:center;
-  font-family:"Playfair Display";
-  font-size:2.0rem;
-}
-.recipeButton{
-  margin:25px 0px;
-  background-color:transparent;
-  border:1px solid #b74848;
-  color:#b74848;
-  padding:5px 50px;
-  font-family:"Barlow Semi Condensed";
-  font-size:1.25rem;
-  transition:all .15s ease-in;
-}
-.recipeButton:focus{
-   margin:25px 0px;
-  background-color:#b74848;
-  color:white;
-  padding:5px 75px;
-  font-family:"Barlow Semi Condensed";
-  outline:none;
-}
-.recipeButton:hover{
-  margin:25px 0px;
-  background-color:#b74848;
-  color:white;
-  padding:5px 75px;
-  font-family:"Barlow Semi Condensed"
-}
-#findTheLinkDiv{
-  text-align:center;
-}
-.findTheLink{
-  color:white;
-  background-color:#b74848;
-  margin-bottom:0px;
-  font-size:1.25rem;
-}
-#sourceLink{
-  text-align:center;
-  background-color:#b74848;
-  padding:15px 35px 35px 35px;
-  color:white;
-}
-.readyIn{
-  padding-top:0px;
-  padding-bottom:10px;
-  font-size:1.5rem;
-}
-.minutes{
-  font-size:2.75rem;
-  color:white;
-}
-.divider{
-  border-bottom:5px solid #b74848;
-  margin:20px 0px;
-  width:50px;
-  text-align:center;
-}
-#recipeImage{
-  border-style: 10px solid white !important;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+  <script>new WOW().init();</script>
+  <title>Prep.io</title>
+</head>
 
-.recipeDiv{
-  padding:25px 0px;
-}
+<body id="body" class="noOverflow">
+  <div id="mainDiv" class="main">
+    <div class="mainContent">
+      <img class="animated fadeIn logo" alt="Prep Logo" id="logo" title="Prep Logo" src="images/prepLogo.png">
+      <div id="zipCodeInfo">
+        <h2 data-wow-delay=".2s" id="description" class="animated wow fadeIn description">Enter Your ZIP Code to begin
+          prepping your meals for the week:</h2>
+        <div data-wow-delay=".5s" class="fadeIn animated wow"><input type="text" name="zipCode" id="zipCode"
+            placeholder="Enter ZIP Code" autocomplete="off"><br><button id="submitZipCode">Get Cookin'</button></div>
+      </div>
+    </div>
+  </div>
+  <span id="error"></span>
+  <div id="show"></div>
 
-.findRecipeButton{
-  border:2px solid #ffffff;
-  color:white;
-  background-color:#b74848;
-  font-family:"Barlow Semi Condensed";
-  padding:5px 15px;
-  margin-top:25px;
-  font-size:1.25rem;
-  transition:ease all .2s;
-}
-.findRecipeButton:hover{
-  border:2px solid #ffffff;
-  color:#b74848;
-  background-color:white;
-  font-family:"Barlow Semi Condensed";
-  padding:5px 15px;
-  margin-top:25px;
-  font-size:1.25rem;
-}
+  <div data-wow-delay="1s" id="hotFoods" class="hidden animated fadeIn wow">
+    <h3>It's gonna be a hot week. You know what sounds good?</h3>
+    <button class="animated fadeIn recipeButton" onclick="getRecipeBurger()">BURGERS</button>
+    <button class="animated fadeIn recipeButton" onclick="getRecipeWraps()">WRAPS</button>
+    <button class="animated fadeIn recipeButton" onclick="getRecipeSalad()">SALADS</button>
+    <button class="animated fadeIn recipeButton" onclick="getRecipeSandwich()">SANDWICHES</button>
+  </div>
 
-.weatherStatus{
-  color: #6c6c6c;
-  font-family:"Barlow Semi Condensed";
-}
+  <div data-wow-delay="1s" id="coldFoods" class="hidden animated fadeIn wow">
+    <h3>It's lookin' chilly this week. Try warming up with some of these!</h3>
+    <button class="animated fadeIn recipeButton" onclick="getRecipeSoup()">SOUP</button>
+    <button class="animated fadeIn recipeButton" onclick="getRecipeRamen()">RAMEN</button>
+    <button class="animated fadeIn recipeButton" onclick="getRecipePasta()">PASTA</button>
+    <button class="animated fadeIn recipeButton" onclick="getRecipeChilli()">CHILI</button>
+  </div>
+  <div id="output" class="recipeDiv hidden animated wow fadeInUp">
+  </div>
+  <script src="main.js"></script>
+</body>
 
-@media screen and (min-width: 1600px) {
-  .main{
-    height:850px;
-    transition: all .5s ease-in;
-  }
-  .main2{
-    height:400px;
-    transition: all .5s ease-in;
-  }
-  .main3{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    width:100%;
-    height:400px;
-    transition: all .5s ease-in;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .main{
-    height:850px;
-    transition: all .5s ease-in;
-  }
-  .main2{
-    height:400px;
-    transition: all .5s ease-in;
-  }
-  .main3{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    width:100%;
-    height:400px;
-    transition: all .5s ease-in;
-  }
-}
-
-
-@media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px) {
-
-.logo{
- width:50%;
-  margin-top:30px;
-  padding-top:30px;
-  margin-bottom:25px;
-  transition: all .5s ease-in;
-}
-
-.logo2{
-  width:25%;
-  margin-top:10px;
-  padding-top:10px;
-  margin-bottom:25px;
-  transition: all .5s ease-in;
-}
-.weatherColumn{
-  display:flex;
-  justify-content:center;
-}
-.weatherDiv{
-  width:90%;
-}
-#zipCode{
-  width:60%;
-}
-#zipCode:focus{
-  width:80%;
-}
-.recipeButton{
-  width:80%;
-  background-color: #b74848;
-  color:white;
-  margin:10px 0px;
-}
-.recipeButton:focus{
-  width:90%;
-}
-
-#recipeImage{
-  width:100%;
-  height:auto;
- }
-}
+</html>
