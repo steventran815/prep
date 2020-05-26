@@ -166,7 +166,6 @@ $(document).ready(function () {
         type: "GET",
         dataType: "json",
         success: function (data) {
-          console.log(data)
           var widget = show(data);
           $("#show").html(widget);
           document.getElementById("zipCode").value = ""

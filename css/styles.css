@@ -87,9 +87,7 @@ h3{
   font-family:"Playfair Display";
   font-size:1.5rem;
 }
-.row{
-  justify-content:space-around;
-}
+
 .col-md-2{
   padding:50px 0px !important;
   margin:0px 5px;
@@ -119,6 +117,11 @@ h3{
   color:#b74848;
   font-size:1.25rem;
 }
+
+.weatherRow{
+  width:100%;
+}
+
 .temperature{
   color:#1c1c1c;
   font-size:2.25rem;
@@ -230,11 +233,9 @@ body{
 #recipeImage{
   border-style: 10px solid white !important;
 }
-
 .recipeDiv{
   padding:25px 0px;
 }
-
 .findRecipeButton{
   border:2px solid #ffffff;
   color:white;
@@ -254,7 +255,6 @@ body{
   margin-top:25px;
   font-size:1.25rem;
 }
-
 .weatherStatus{
   color: #6c6c6c;
   font-family:"Barlow Semi Condensed";
@@ -300,7 +300,6 @@ body{
   }
 }
 
-
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 667px) {
@@ -312,7 +311,6 @@ and (max-device-width : 667px) {
   margin-bottom:25px;
   transition: all .5s ease-in;
 }
-
 .logo2{
   width:25%;
   margin-top:10px;
@@ -342,7 +340,6 @@ and (max-device-width : 667px) {
 .recipeButton:focus{
   width:90%;
 }
-
 #recipeImage{
   width:100%;
   height:auto;
