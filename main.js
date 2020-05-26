@@ -3,7 +3,7 @@ var hiddenColdFood = document.getElementById("coldFoods")
 var output = document.getElementById("output")
 var mainDiv = document.getElementById("mainDiv")
 var logo = document.getElementById("logo")
-var recipeNumber = (Math.floor(Math.random() * (10 - 1) + 1));
+var recipeNumber = (Math.floor(Math.random() * (5 - 1) + 1));
 
 function getSource(id) {
   $.ajax({
@@ -67,7 +67,7 @@ function getRecipeSalad() {
 }
 function getRecipeSandwich() {
   $.ajax({
-    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=cold+sandwiches",
+    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=sandwich",
     success: function (res) {
 
       output.classList.remove("hidden");
@@ -146,7 +146,7 @@ function getRecipeChilli() {
       mainDiv.classList.remove("main2")
       mainDiv.classList.add("main3")
 
-      "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
+      "<h3>" + res.results[recipeNumber].title + "</h3><h3 class='readyIn'>Ready in <span class='minutes'>"
         + res.results[recipeNumber].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
         + res.baseUri + res.results[recipeNumber].image + "'height='400'/><br>"
         + "<a href='" + res.results[recipeNumber].sourceUrl + "' target='_blank'> <button class='findRecipeButton'>FIND THE RECIPE HERE</button></a>"
@@ -193,11 +193,11 @@ function show(data) {
   return '<h4 data-wow-delay=".0s" class="forecast animated fadeInDown Wow">' + data.city.name + '&apos;s Forecast:<center><div class="divider"></div></center></h4>' +
     '<div class="row weatherRow">'
     + '<div class="offset-md-1"></div>'
-    + '<div data-wow-delay=".1s" class="weatherColumn animated wow fadeInUp col-md-12 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[0].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + data.list[0].main.feels_like + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[0].weather[0].main + '</h5></div></div>'
-    + '<div data-wow-delay=".2s" class="weatherColumn animated wow fadeInUp col-md-12 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[8].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + data.list[8].main.feels_like + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[8].weather[0].main + '</h5></div></div>'
-    + '<div data-wow-delay=".3s" class="weatherColumn animated wow fadeInUp col-md-12 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[16].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + data.list[16].main.feels_like + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[16].weather[0].main + '</h5></div></div>'
-    + '<div data-wow-delay=".4s" class="weatherColumn animated wow fadeInUp col-md-12 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[32].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + data.list[32].main.feels_like + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[32].weather[0].main + '</h5></div></div>'
-    + '<div data-wow-delay=".5s" class="weatherColumn animated wow fadeInUp col-md-12 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[39].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + data.list[39].main.feels_like + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[39].weather[0].main + '</h5></div></div>'
+    + '<div data-wow-delay=".1s" class="weatherColumn animated wow fadeInUp col-md-12 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[0].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[0].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[0].weather[0].main + '</h5></div></div>'
+    + '<div data-wow-delay=".2s" class="weatherColumn animated wow fadeInUp col-md-12 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[8].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[8].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[8].weather[0].main + '</h5></div></div>'
+      + '<div data-wow-delay=".3s" class="weatherColumn animated wow fadeInUp col-md-12 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[16].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[16].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[16].weather[0].main + '</h5></div></div>'
+        + '<div data-wow-delay=".4s" class="weatherColumn animated wow fadeInUp col-md-12 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[32].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[32].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[32].weather[0].main + '</h5></div></div>'
+          + '<div data-wow-delay=".5s" class="weatherColumn animated wow fadeInUp col-md-12 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[39].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[39].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[39].weather[0].main + '</h5></div></div>'
     + '<div class="offset-md-1"></div>'
     + '</div>'
 }
