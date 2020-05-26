@@ -162,11 +162,10 @@ $(document).ready(function () {
     if (city != '') {
 
       $.ajax({
-        url: "http://api.openweathermap.org/data/2.5/forecast?zip=" + city + "&units=imperial" + "&appid=7cd09e3d8351c4be6584a8a84a5880b7",
+        url: "https://api.openweathermap.org/data/2.5/forecast?zip=" + city + "&units=imperial" + "&appid=7cd09e3d8351c4be6584a8a84a5880b7",
         type: "GET",
         dataType: "json",
         success: function (data) {
-          console.log(data)
           var widget = show(data);
           $("#show").html(widget);
           document.getElementById("zipCode").value = ""
