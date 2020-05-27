@@ -22,8 +22,12 @@
       <div id="zipCodeInfo">
         <h2 data-wow-delay=".2s" id="description" class="animated wow fadeIn description">Enter Your ZIP Code to begin
           prepping your meals for the week:</h2>
+                        <div class="errorModal hidden" id="errorModal">
+                          <p class="errorMessage">The Zip Code you entered is invalid</p>
+                        </div>
         <div data-wow-delay=".5s" class="fadeIn animated wow"><input type="text" name="zipCode" id="zipCode"
-            placeholder="Enter ZIP Code" autocomplete="off"><br><button id="submitZipCode">Get Cookin'</button></div>
+            placeholder="Enter ZIP Code" autocomplete="off"><br>
+          <button id="submitZipCode">Get Cookin'</button></div>
       </div>
     </div>
   </div>
