@@ -3,6 +3,8 @@ var hiddenColdFood = document.getElementById("coldFoods")
 var output = document.getElementById("output")
 var mainDiv = document.getElementById("mainDiv")
 var logo = document.getElementById("logo")
+var hotFoods = document.getElementById("hotFoods")
+var coldFoods = document.getElementById("coldFoods")
 var recipeNumber = (Math.floor(Math.random() * (5 - 1) + 1));
 
 function getSource(id) {
@@ -20,6 +22,8 @@ function getRecipeBurger() {
       output.classList.add("reveal")
       mainDiv.classList.remove("main2")
       mainDiv.classList.add("main3")
+      hotFoods.classList.remove("top-margin")
+      coldFoods.classList.remove("top-margin")
 
       document.getElementById("output").innerHTML =
         "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
