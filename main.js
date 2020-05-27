@@ -42,6 +42,8 @@ function getRecipeWraps() {
       output.classList.add("reveal")
       mainDiv.classList.remove("main2")
       mainDiv.classList.add("main3")
+      hotFoods.classList.remove("top-margin")
+      coldFoods.classList.remove("top-margin")
 
       document.getElementById("output").innerHTML =
         "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
@@ -60,6 +62,8 @@ function getRecipeSalad() {
       output.classList.add("reveal")
       mainDiv.classList.remove("main2")
       mainDiv.classList.add("main3")
+      hotFoods.classList.remove("top-margin")
+      coldFoods.classList.remove("top-margin")
 
       document.getElementById("output").innerHTML =
         "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
@@ -78,6 +82,8 @@ function getRecipeSandwich() {
       output.classList.add("reveal")
       mainDiv.classList.remove("main2")
       mainDiv.classList.add("main3")
+      hotFoods.classList.remove("top-margin")
+      coldFoods.classList.remove("top-margin")
 
       document.getElementById("output").innerHTML =
         "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
@@ -96,6 +102,8 @@ function getRecipeSoup() {
       output.classList.add("reveal")
       mainDiv.classList.remove("main2")
       mainDiv.classList.add("main3")
+      hotFoods.classList.remove("top-margin")
+      coldFoods.classList.remove("top-margin")
 
       document.getElementById("output").innerHTML =
         "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
@@ -114,6 +122,8 @@ function getRecipeRamen() {
       output.classList.add("reveal")
       mainDiv.classList.remove("main")
       mainDiv.classList.add("main2")
+      hotFoods.classList.remove("top-margin")
+      coldFoods.classList.remove("top-margin")
 
       document.getElementById("output").innerHTML =
         "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
@@ -132,6 +142,8 @@ function getRecipePasta() {
       output.classList.add("reveal")
       mainDiv.classList.remove("main2")
       mainDiv.classList.add("main3")
+      hotFoods.classList.remove("top-margin")
+      coldFoods.classList.remove("top-margin")
 
       "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
         + res.results[recipeNumber].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
@@ -149,6 +161,8 @@ function getRecipeChilli() {
       output.classList.add("reveal")
       mainDiv.classList.remove("main2")
       mainDiv.classList.add("main3")
+      hotFoods.classList.remove("top-margin")
+      coldFoods.classList.remove("top-margin")
 
       "<h3>" + res.results[recipeNumber].title + "</h3><h3 class='readyIn'>Ready in <span class='minutes'>"
         + res.results[recipeNumber].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
