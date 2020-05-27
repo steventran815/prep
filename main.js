@@ -5,6 +5,7 @@ var mainDiv = document.getElementById("mainDiv")
 var logo = document.getElementById("logo")
 var hotFoods = document.getElementById("hotFoods")
 var coldFoods = document.getElementById("coldFoods")
+errorModal = document.getElementById("errorModal")
 var recipeNumber = (Math.floor(Math.random() * (5 - 1) + 1));
 
 function getSource(id) {
@@ -183,6 +184,19 @@ $(document).ready(function () {
         url: "https://api.openweathermap.org/data/2.5/forecast?zip=" + city + "&units=imperial" + "&appid=7cd09e3d8351c4be6584a8a84a5880b7",
         type: "GET",
         dataType: "json",
+        error:
+
+          function () {
+            errorModal.classList.remove("hidden")
+            setTimeout(function () {
+              errorModal.classList.add("hidden")
+            }, 3000)
+          }
+
+
+
+
+        ,
         success: function (data) {
           var widget = show(data);
           $("#show").html(widget);
@@ -195,6 +209,10 @@ $(document).ready(function () {
       });
     } else {
       $("error").html('Field cannot be empty');
+      errorModal.classList.remove("hidden")
+      setTimeout(function(){
+      errorModal.classList.add("hidden")
+      },3000);
     }
   });
 });
@@ -212,9 +230,9 @@ function show(data) {
 
     + '<div data-wow-delay=".1s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[0].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[0].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[0].weather[0].main + '</h5></div></div>'
     + '<div data-wow-delay=".2s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[8].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[8].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[8].weather[0].main + '</h5></div></div>'
-      + '<div data-wow-delay=".3s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[16].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[16].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[16].weather[0].main + '</h5></div></div>'
-        + '<div data-wow-delay=".4s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[32].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[32].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[32].weather[0].main + '</h5></div></div>'
-          + '<div data-wow-delay=".5s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[39].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[39].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[39].weather[0].main + '</h5></div></div>'
+    + '<div data-wow-delay=".3s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[16].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[16].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[16].weather[0].main + '</h5></div></div>'
+    + '<div data-wow-delay=".4s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[32].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[32].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[32].weather[0].main + '</h5></div></div>'
+    + '<div data-wow-delay=".5s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[39].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[39].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[39].weather[0].main + '</h5></div></div>'
 
     + '</div>'
 }
