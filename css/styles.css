@@ -144,9 +144,10 @@ h3{
 .reveal{
   display:block;
 }
-body{
+  body{
   background:url("../images/prepBackground.png");
   background-size: cover;
+  background-attachment: fixed;
   height:1134px;
 }
 #submitZipCode{
@@ -270,17 +271,14 @@ body{
   color: #6c6c6c;
   font-family:"Barlow Semi Condensed";
 }
-
 .errorModal{
   margin-top:25px;
 }
-
 .errorMessage{
   color: #b74848;
   font-family:"Barlow Semi Condensed";
   margin-bottom:0px;
 }
-
 .hidden{
   opacity: 0;
   pointer-events:none;
@@ -394,13 +392,13 @@ and (max-device-width : 667px) {
  }
 
 .main3{
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-width:100%;
-height:400px;
-transition: all .5s ease-in;
-}
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  width:100%;
+  height:400px;
+  transition: all .5s ease-in;
+  }
 
 }
