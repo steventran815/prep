@@ -118,10 +118,15 @@ h3{
   font-size:1.25rem;
 }
 
-.weatherRow{
-  width:100%;
+.row{
+  margin:0px !important;
 }
 
+.weatherRow{
+  display:flex;
+  justify-content:center;
+  flex-wrap: wrap;
+}
 .temperature{
   color:#1c1c1c;
   font-size:2.25rem;
@@ -297,6 +302,18 @@ body{
     width:100%;
     height:400px;
     transition: all .5s ease-in;
+  }
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+  .weatherColumn{
+    flex-basis:50%;
+    justify-content:center;
+  }
+  .weatherDiv{
+    flex-basis:45%;
   }
 }
 
