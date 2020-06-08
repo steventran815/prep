@@ -6,6 +6,7 @@ var logo = document.getElementById("logo")
 var hotFoods = document.getElementById("hotFoods")
 var coldFoods = document.getElementById("coldFoods")
 var errorModal = document.getElementById("errorModal")
+var zipCodeInfo = document.getElementById("zipCodeInfo")
 var recipeNumber = (Math.floor(Math.random() * (5 - 1) + 1));
 
 function getSource(id) {
@@ -210,7 +211,10 @@ $(document).ready(function () {
   });
 });
 function show(data) {
+  console.log(data)
   var averageWeather = (((data.list[0].main.feels_like) + (data.list[8].main.feels_like) + (data.list[16].main.feels_like) + (data.list[32].main.feels_like) + (data.list[39].main.feels_like)) / 5);
+  zipCodeInfo.classList.add("invisible")
+
   if (Math.trunc(averageWeather) > 60) {
     hiddenHotFood.classList.remove("hidden");
     hiddenHotFood.classList.add("reveal");
@@ -226,6 +230,5 @@ function show(data) {
     + '<div data-wow-delay=".3s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[16].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[16].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[16].weather[0].main + '</h5></div></div>'
     + '<div data-wow-delay=".4s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[32].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[32].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[32].weather[0].main + '</h5></div></div>'
     + '<div data-wow-delay=".5s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[39].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[39].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[39].weather[0].main + '</h5></div></div>'
-
     + '</div>'
 }
