@@ -44,13 +44,12 @@
 }
 .logo{
   width:25%;
-  margin-top:25px;
-  margin-bottom:25px;
   transition: all .5s ease-in;
 }
 .logo2{
   width:15%;
-  margin-top:0px;
+  margin-top:25px;
+  margin-bottom:25px;
   transition: all .5s ease-in;
 }
 #zipCode{
@@ -141,14 +140,18 @@ h3{
 .hidden{
   display:none;
 }
+.invisible{
+  opacity:0;
+  pointer-events:none;
+}
 .reveal{
   display:block;
 }
   body{
-  background:url("../images/prepBackground.png");
+  background:url("../images/prepBackground.jpg");
   background-size: cover;
   background-attachment: fixed;
-  height:1134px;
+  background-position:center;
 }
 #submitZipCode{
   margin:25px;
@@ -335,7 +338,7 @@ and (max-device-width : 1024px)  {
   .weatherDiv{
     flex-basis:45%;
   }
-     .main3{
+  .main3{
     display:flex;
     justify-content:center;
     align-items:center;
@@ -358,9 +361,9 @@ and (max-device-width : 667px) {
   transition: all .5s ease-in;
 }
 .logo2{
-  width:25%;
-  margin-top:10px;
-  padding-top:10px;
+ width:25%;
+  margin-top:30px;
+  padding-top:30px;
   margin-bottom:25px;
   transition: all .5s ease-in;
 }
