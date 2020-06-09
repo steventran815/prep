@@ -24,26 +24,17 @@
   justify-content:center;
   align-items:center;
   text-align:center;
+  padding-top:175px;
   width:100%;
-  height:400px;
+  height:250px;
   transition: all .5s ease-in;
 }
-.main3{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  width:100%;
-  height:350px;
-  transition: all .5s ease-in;
-}
+
 .mainContent{
   width:80%;
-  padding-top:20px;
-  margin-top:20px;
 }
 .logo{
-  width:25%;
+  width:15%;
   transition: all .5s ease-in;
 }
 .logo2{
@@ -78,6 +69,7 @@
   font-size:1.25rem;
   color:#2c2c2c;
   transition:all .25s ease-in;
+  margin-top: 30px;
 }
 h2{
   font-family: "Playfair Display";
@@ -104,6 +96,15 @@ h3{
   transition:all .1s ease-in;
   box-shadow:0px 5px 5px #999999;
 }
+.weatherDiv2{
+  background-color:#ffffff;
+  text-align:center;
+  padding:25px 0px;
+  border-radius:20px;
+  transition:all .1s ease-in;
+  box-shadow:0px 5px 5px #999999;
+}
+
 .weatherDiv:hover{
   opacity:1;
   padding:55px 0px;
@@ -152,6 +153,47 @@ h3{
   background-size: cover;
   background-attachment: fixed;
   background-position:center;
+  position:relative;
+}
+
+.loadingScreen{
+  position:fixed;
+  display:flex;
+  top:0%;
+  left:0%;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+  width:100%;
+  background-color:rgba(0,0,0,.5);
+  z-index:1000;
+  transition:ease all .2s;
+}
+
+.loading-screen-modal{
+  background-color:white;
+  padding:50px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:20px;
+}
+
+.loadingTitle{
+  display:block;
+  width:100%;
+}
+.loadingSpinner{
+  display:block;
+  width:50px;
+  animation:spin 1s;
+  animation-iteration-count:infinite;
+}
+
+@keyframes spin{
+  100%{
+    transform:rotate(720deg)
+  }
 }
 #submitZipCode{
   margin:25px;
@@ -175,7 +217,6 @@ h3{
 
   text-align:center;
   justify-content:center;
-
 }
 #hotFoods{
   padding-top:25px;
@@ -294,39 +335,11 @@ h3{
     transition: all .5s ease-in;
   }
   .main2{
-    height:400px;
-    transition: all .5s ease-in;
-  }
-  .main3{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    width:100%;
-    height:400px;
+    height:250px;
     transition: all .5s ease-in;
   }
 }
 
-@media screen and (min-width: 1600px) {
-  .main{
-    height:850px;
-    transition: all .5s ease-in;
-  }
-  .main2{
-    height:400px;
-    transition: all .5s ease-in;
-  }
-  .main3{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    width:100%;
-    height:400px;
-    transition: all .5s ease-in;
-  }
-}
 
 @media only screen
 and (min-device-width : 768px)
@@ -338,14 +351,12 @@ and (max-device-width : 1024px)  {
   .weatherDiv{
     flex-basis:45%;
   }
-  .main3{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    width:100%;
-    height:350px;
-    transition: all .5s ease-in;
+
+  .logo{
+    width:40%;
+  }
+  .logo2{
+    width:25%;
   }
 }
 
@@ -356,12 +367,12 @@ and (max-device-width : 667px) {
 .logo{
  width:50%;
   margin-top:30px;
-  padding-top:30px;
+  margin-top:30px;
   margin-bottom:25px;
   transition: all .5s ease-in;
 }
 .logo2{
- width:25%;
+ width:50%;
   margin-top:30px;
   padding-top:30px;
   margin-bottom:25px;
@@ -393,15 +404,4 @@ and (max-device-width : 667px) {
   width:100%;
   height:auto;
  }
-
-.main3{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  width:100%;
-  height:400px;
-  transition: all .5s ease-in;
-  }
-
 }

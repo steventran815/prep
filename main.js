@@ -3,10 +3,10 @@ var hiddenColdFood = document.getElementById("coldFoods")
 var output = document.getElementById("output")
 var mainDiv = document.getElementById("mainDiv")
 var logo = document.getElementById("logo")
-var hotFoods = document.getElementById("hotFoods")
-var coldFoods = document.getElementById("coldFoods")
 var errorModal = document.getElementById("errorModal")
 var zipCodeInfo = document.getElementById("zipCodeInfo")
+var loadingScreen = document.getElementById("loadingScreen")
+var weatherDiv = document.getElementById("weatherDiv")
 var recipeNumber = (Math.floor(Math.random() * (5 - 1) + 1));
 
 function getSource(id) {
@@ -16,17 +16,21 @@ function getSource(id) {
 }
 
 function getRecipeBurger() {
-
+  setTimeout(function () {
+    loadingScreen.classList.remove("hidden")
+  }, 0)
+  setTimeout(function () {
+    loadingScreen.classList.add("hidden")
+  }, 500)
+  setTimeout(function(){
+    var output = document.getElementById("output");
+  output.scrollIntoView();
+  },500);
   $.ajax({
     url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=burger",
     success: function (res) {
       output.classList.remove("hidden");
       output.classList.add("reveal")
-      mainDiv.classList.remove("main2")
-      mainDiv.classList.add("main3")
-      hotFoods.classList.remove("top-margin")
-      coldFoods.classList.remove("top-margin")
-
       document.getElementById("output").innerHTML =
         "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
         + res.results[recipeNumber].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
@@ -36,16 +40,22 @@ function getRecipeBurger() {
   })
 }
 function getRecipeWraps() {
+  setTimeout(function () {
+    loadingScreen.classList.remove("hidden")
+  }, 0)
+  setTimeout(function () {
+    loadingScreen.classList.add("hidden")
+  }, 500)
+  setTimeout(function () {
+    var output = document.getElementById("output");
+    output.scrollIntoView();
+  }, 500);
   $.ajax({
     url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=wrap",
     success: function (res) {
 
       output.classList.remove("hidden");
       output.classList.add("reveal")
-      mainDiv.classList.remove("main2")
-      mainDiv.classList.add("main3")
-      hotFoods.classList.remove("top-margin")
-      coldFoods.classList.remove("top-margin")
 
       document.getElementById("output").innerHTML =
         "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
@@ -56,16 +66,22 @@ function getRecipeWraps() {
   })
 }
 function getRecipeSalad() {
+  setTimeout(function () {
+    loadingScreen.classList.remove("hidden")
+  }, 0)
+  setTimeout(function () {
+    loadingScreen.classList.add("hidden")
+  }, 500)
+  setTimeout(function () {
+    var output = document.getElementById("output");
+    output.scrollIntoView();
+  }, 500);
   $.ajax({
     url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=salad",
     success: function (res) {
 
       output.classList.remove("hidden");
       output.classList.add("reveal")
-      mainDiv.classList.remove("main2")
-      mainDiv.classList.add("main3")
-      hotFoods.classList.remove("top-margin")
-      coldFoods.classList.remove("top-margin")
 
       document.getElementById("output").innerHTML =
         "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
@@ -76,17 +92,21 @@ function getRecipeSalad() {
   })
 }
 function getRecipeSandwich() {
+  setTimeout(function () {
+    loadingScreen.classList.remove("hidden")
+  }, 0)
+  setTimeout(function () {
+    loadingScreen.classList.add("hidden")
+  }, 500)
+  setTimeout(function () {
+    var output = document.getElementById("output");
+    output.scrollIntoView();
+  }, 500);
   $.ajax({
     url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=sandwich",
     success: function (res) {
-
       output.classList.remove("hidden");
       output.classList.add("reveal")
-      mainDiv.classList.remove("main2")
-      mainDiv.classList.add("main3")
-      hotFoods.classList.remove("top-margin")
-      coldFoods.classList.remove("top-margin")
-
       document.getElementById("output").innerHTML =
         "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
         + res.results[recipeNumber].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
@@ -96,16 +116,22 @@ function getRecipeSandwich() {
   })
 }
 function getRecipeSoup() {
+  setTimeout(function () {
+    loadingScreen.classList.remove("hidden")
+  }, 0)
+  setTimeout(function () {
+    loadingScreen.classList.add("hidden")
+  }, 500)
+  setTimeout(function () {
+    var output = document.getElementById("output");
+    output.scrollIntoView();
+  }, 500);
   $.ajax({
     url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=soup",
     success: function (res) {
 
       output.classList.remove("hidden");
       output.classList.add("reveal")
-      mainDiv.classList.remove("main2")
-      mainDiv.classList.add("main3")
-      hotFoods.classList.remove("top-margin")
-      coldFoods.classList.remove("top-margin")
 
       document.getElementById("output").innerHTML =
         "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
@@ -116,6 +142,16 @@ function getRecipeSoup() {
   })
 }
 function getRecipeRamen() {
+  setTimeout(function () {
+    loadingScreen.classList.remove("hidden")
+  }, 0)
+  setTimeout(function () {
+    loadingScreen.classList.add("hidden")
+  }, 500)
+  setTimeout(function () {
+    var output = document.getElementById("output");
+    output.scrollIntoView();
+  }, 500);
   $.ajax({
     url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=ramen",
     success: function (res) {
@@ -124,8 +160,6 @@ function getRecipeRamen() {
       output.classList.add("reveal")
       mainDiv.classList.remove("main")
       mainDiv.classList.add("main2")
-      hotFoods.classList.remove("top-margin")
-      coldFoods.classList.remove("top-margin")
 
       document.getElementById("output").innerHTML =
         "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
@@ -136,16 +170,22 @@ function getRecipeRamen() {
   })
 }
 function getRecipePasta() {
+  setTimeout(function () {
+    loadingScreen.classList.remove("hidden")
+  }, 0)
+  setTimeout(function () {
+    loadingScreen.classList.add("hidden")
+  }, 500)
+  setTimeout(function () {
+    var output = document.getElementById("output");
+    output.scrollIntoView();
+  }, 500);
   $.ajax({
     url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=pasta",
     success: function (res) {
 
       output.classList.remove("hidden");
       output.classList.add("reveal")
-      mainDiv.classList.remove("main2")
-      mainDiv.classList.add("main3")
-      hotFoods.classList.remove("top-margin")
-      coldFoods.classList.remove("top-margin")
 
       "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
         + res.results[recipeNumber].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
@@ -155,17 +195,21 @@ function getRecipePasta() {
   })
 }
 function getRecipeChilli() {
+  setTimeout(function () {
+    loadingScreen.classList.remove("hidden")
+  }, 0)
+  setTimeout(function () {
+    loadingScreen.classList.add("hidden")
+  }, 100)
+  setTimeout(function () {
+    var output = document.getElementById("output");
+    output.scrollIntoView();
+  }, 500);
   $.ajax({
     url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=chilli",
     success: function (res) {
-
       output.classList.remove("hidden");
       output.classList.add("reveal")
-      mainDiv.classList.remove("main2")
-      mainDiv.classList.add("main3")
-      hotFoods.classList.remove("top-margin")
-      coldFoods.classList.remove("top-margin")
-
       "<h3>" + res.results[recipeNumber].title + "</h3><h3 class='readyIn'>Ready in <span class='minutes'>"
         + res.results[recipeNumber].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
         + res.baseUri + res.results[recipeNumber].image + "'height='400'/><br>"
@@ -176,6 +220,7 @@ function getRecipeChilli() {
 
 $(document).ready(function () {
   $("#submitZipCode").click(function () {
+    $("#submitZipCode").off("click");
     var city = document.getElementById("zipCode").value
     var body = document.getElementById("body")
     body.classList.remove("noOverflow");
@@ -192,6 +237,7 @@ $(document).ready(function () {
             }, 3000)
           },
         success: function (data) {
+          zipCodeInfo.classList.add("invisible")
           var widget = show(data);
           $("#show").html(widget);
           document.getElementById("zipCode").value = ""
@@ -211,9 +257,14 @@ $(document).ready(function () {
   });
 });
 function show(data) {
-  console.log(data)
+  setTimeout(function(){
+  loadingScreen.classList.remove("hidden")
+  },0)
+  setTimeout(function () {
+    loadingScreen.classList.add("hidden")
+  }, 500)
+
   var averageWeather = (((data.list[0].main.feels_like) + (data.list[8].main.feels_like) + (data.list[16].main.feels_like) + (data.list[32].main.feels_like) + (data.list[39].main.feels_like)) / 5);
-  zipCodeInfo.classList.add("invisible")
 
   if (Math.trunc(averageWeather) > 60) {
     hiddenHotFood.classList.remove("hidden");
@@ -225,10 +276,10 @@ function show(data) {
   return '<h4 data-wow-delay=".0s" class="forecast animated fadeInDown Wow">' + data.city.name + '&apos;s Forecast:<center><div class="divider"></div></center></h4>' +
     '<div class="row weatherRow">'
 
-    + '<div data-wow-delay=".1s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[0].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[0].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[0].weather[0].main + '</h5></div></div>'
-    + '<div data-wow-delay=".2s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[8].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[8].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[8].weather[0].main + '</h5></div></div>'
-    + '<div data-wow-delay=".3s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[16].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[16].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[16].weather[0].main + '</h5></div></div>'
-    + '<div data-wow-delay=".4s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[32].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[32].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[32].weather[0].main + '</h5></div></div>'
-    + '<div data-wow-delay=".5s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div class="weatherDiv"><h3><strong>' + data.list[39].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[39].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[39].weather[0].main + '</h5></div></div>'
+    + '<div data-wow-delay=".1s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div id="weatherDiv" class="weatherDiv"><h3><strong>' + data.list[0].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[0].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[0].weather[0].main + '</h5></div></div>'
+    + '<div data-wow-delay=".2s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div id="weatherDiv" class="weatherDiv"><h3><strong>' + data.list[8].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[8].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[8].weather[0].main + '</h5></div></div>'
+    + '<div data-wow-delay=".3s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div id="weatherDiv" class="weatherDiv"><h3><strong>' + data.list[16].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[16].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[16].weather[0].main + '</h5></div></div>'
+    + '<div data-wow-delay=".4s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div id="weatherDiv" class="weatherDiv"><h3><strong>' + data.list[32].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[32].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[32].weather[0].main + '</h5></div></div>'
+    + '<div data-wow-delay=".5s" class="weatherColumn animated wow fadeInUp col-md-6 col-lg-2 weatherDivContainer"><div id="weatherDiv" class="weatherDiv"><h3><strong>' + data.list[39].dt_txt.substr(5, 5).replace('-', '/') + "</strong><br></h3>" + '<h3><span class="temperature">' + Math.floor(data.list[39].main.feels_like) + '<span class="degrees">°F</span></span></h3><br><h5 class="weatherStatus">' + data.list[39].weather[0].main + '</h5></div></div>'
     + '</div>'
 }
