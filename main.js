@@ -186,8 +186,11 @@ function getRecipePasta() {
 
       output.classList.remove("hidden");
       output.classList.add("reveal")
+      mainDiv.classList.remove("main")
+      mainDiv.classList.add("main2")
 
-      "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
+      document.getElementById("output").innerHTML =
+        "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
         + res.results[recipeNumber].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
         + res.baseUri + res.results[recipeNumber].image + "'height='400'/><br>"
         + "<a href='" + res.results[recipeNumber].sourceUrl + "' target='_blank'> <button class='findRecipeButton'>FIND THE RECIPE HERE</button></a>"
@@ -200,17 +203,22 @@ function getRecipeChilli() {
   }, 0)
   setTimeout(function () {
     loadingScreen.classList.add("hidden")
-  }, 100)
+  }, 500)
   setTimeout(function () {
     var output = document.getElementById("output");
     output.scrollIntoView();
   }, 500);
   $.ajax({
-    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=chilli",
+    url: "https://api.spoonacular.com/recipes/search?apiKey=27e23debc10f4f63831d9b64a7285b86&number=10&query=chili",
     success: function (res) {
+
       output.classList.remove("hidden");
       output.classList.add("reveal")
-      "<h3>" + res.results[recipeNumber].title + "</h3><h3 class='readyIn'>Ready in <span class='minutes'>"
+      mainDiv.classList.remove("main")
+      mainDiv.classList.add("main2")
+
+      document.getElementById("output").innerHTML =
+        "<h2>" + res.results[recipeNumber].title + "</h2><h3 class='readyIn'>Ready in <span class='minutes'>"
         + res.results[recipeNumber].readyInMinutes + "</span> minutes</h3><img id='recipeImage' src='"
         + res.baseUri + res.results[recipeNumber].image + "'height='400'/><br>"
         + "<a href='" + res.results[recipeNumber].sourceUrl + "' target='_blank'> <button class='findRecipeButton'>FIND THE RECIPE HERE</button></a>"
